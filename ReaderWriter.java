@@ -46,7 +46,7 @@ public class ReaderWriter {
      * @param expression
      * @param answer
      */
-    public void writer(ArrayList<Character> expression, float answer){
+    public void writer(ArrayList<Character> expression, Object answer){
         for(Character symbol: expression){
             System.out.print(symbol);
         }
