@@ -21,11 +21,11 @@ public class ReaderWriter {
 
     /**
      *
+     * @param expression
      * @param fileName
-     * @return
      */
-    public ArrayList<Character> getExpression(String fileName){
-        ArrayList<Character> expression = new ArrayList();
+    public void getExpression( ArrayList<Character> expression,String fileName){
+
         BufferedReader bufferedReader;
         try {
             bufferedReader = new BufferedReader(new FileReader(fileName));
@@ -39,8 +39,6 @@ public class ReaderWriter {
         catch (IOException ex) {
             Logger.getLogger(ReaderWriter.class.getName()).log(Level.SEVERE, null, ex);
         }
-
-        return expression;
     }
     
     /**

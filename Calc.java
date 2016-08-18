@@ -25,15 +25,24 @@ public class Calc {
         this.fileName = fileName;
     }
 
-
+    /**
+     *
+     */
     public void calculation(){
         ReaderWriter readWriter = new ReaderWriter();
-        expression = readWriter.getExpression(fileName);
+        readWriter.getExpression(expression, fileName);
         
-        readWriter.writer(expression, 0);
+        Check check = new Check(expression);
+        if(check.fullCheck()){
+            
+            readWriter.writer(expression, 0);
+        }
     }
     
-
+    /**
+     *
+     * @param args
+     */
     public static void main(String[] args) {
         Calc calc = new Calc("C:\\tmp\\expression.txt");
         calc.calculation();
