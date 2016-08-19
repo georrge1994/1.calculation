@@ -20,9 +20,9 @@ import java.util.logging.Logger;
 public class ReaderWriter {
 
     /**
-     *
-     * @param expression
-     * @param fileName
+     * Read expression from file
+     * @param expression    - list of the symbols
+     * @param fileName      - name input file
      */
     public void getExpression( ArrayList<Character> expression,String fileName){
 
@@ -42,9 +42,9 @@ public class ReaderWriter {
     }
     
     /**
-     *
-     * @param expression
-     * @param answer
+     *  Write expression with answer
+     * @param expression - list of the symbols
+     * @param answer     - result of calculation
      */
     public void writer(ArrayList<Character> expression, Object answer){
         for(Character symbol: expression){

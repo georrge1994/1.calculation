@@ -12,7 +12,7 @@ import java.util.ArrayList;
  * @author Георгий
  */
 public class Check {
-    private final ArrayList<Character> expression;
+    private final ArrayList<Character> expression;                              // list of expression symbols
     
     /**
      *
@@ -24,7 +24,7 @@ public class Check {
     
     /**
      *
-     * @return
+     * @return true if expression hasn`t syntax errors
      */
     public boolean fullCheck(){
         if(!checkRightSymbol())

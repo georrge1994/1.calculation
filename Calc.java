@@ -6,7 +6,6 @@
 package pkg1.calc;
 
 import java.util.ArrayList;
-import java.math.RoundingMode;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.script.ScriptEngine;
@@ -18,8 +17,8 @@ import javax.script.ScriptException;
  * @author Георгий
  */
 public class Calc {
-    public ArrayList<Character> expression;
-    public String fileName;
+    public ArrayList<Character> expression;                                     // list for symbols
+    public String fileName;                                                     // input file name
 
     /**
      * @param fileName
@@ -47,7 +46,7 @@ public class Calc {
     }
     
     /*
-    * calculate answer
+    * calculate answer with help js
     */
     private Object getResult(String expressionString){
         Object eval = new Object();
@@ -82,10 +81,7 @@ public class Calc {
         }
         return expressionString;
     }
-    /**
-     *
-     * @param args
-     */
+
     public static void main(String[] args) {
         Calc calc = new Calc("C:\\tmp\\expression.txt");
         calc.calculation();
