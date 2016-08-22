@@ -46,11 +46,8 @@ public class ReaderWriter {
      * @param expression - list of the symbols
      * @param answer     - result of calculation
      */
-    public void writer(ArrayList<Character> expression, Object answer){
-        for(Character symbol: expression){
-            System.out.print(symbol);
-        }
-        System.out.println(" = " + answer);
+    public void writer(String expression, Object answer){
+        System.out.println(expression + " = " + answer);
         
     }
 }
